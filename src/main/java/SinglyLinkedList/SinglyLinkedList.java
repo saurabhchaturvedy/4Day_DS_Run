@@ -124,7 +124,7 @@ public class SinglyLinkedList<T> {
 
     private <T> void removeNode(ListNode<T> head, T data) {
         ListNode<T> current = head;
-        while (current != null && current.next!=null) {
+        while (current != null && current.next != null) {
             if (current.next.data == data) {
                 current.next = current.next.next;
             }
@@ -132,16 +132,14 @@ public class SinglyLinkedList<T> {
         }
     }
 
-    private boolean containsLoop(ListNode<T> node)
-    {
+    private boolean containsLoop(ListNode<T> node) {
         ListNode<T> fastPtr = head;
         ListNode<T> slowPtr = head;
-        while(fastPtr!=null && fastPtr.next!=null)
-        {
+        while (fastPtr != null && fastPtr.next != null) {
             fastPtr = fastPtr.next.next;
             slowPtr = slowPtr.next;
 
-            if(fastPtr==slowPtr) return true;
+            if (fastPtr == slowPtr) return true;
         }
         return false;
     }
@@ -177,15 +175,15 @@ public class SinglyLinkedList<T> {
         fourth.next = fifth;
         //fifth.next = second; to simulate a loop
 
-       // singlyLinkedList.printList(singlyLinkedList.head);
+        // singlyLinkedList.printList(singlyLinkedList.head);
         singlyLinkedList.insertAtHead(0);
         singlyLinkedList.insertInSortedList(singlyLinkedList.head, 6);
-       // singlyLinkedList.printList(singlyLinkedList.head);
+        // singlyLinkedList.printList(singlyLinkedList.head);
         System.out.println("Length of the linked list is : " + singlyLinkedList.length(singlyLinkedList.head));
         singlyLinkedList.removeNode(singlyLinkedList.head, 4);
         //singlyLinkedList.printList(singlyLinkedList.head);
         System.out.println("Length of the linked list is : " + singlyLinkedList.length(singlyLinkedList.head));
-        System.out.println("Does LinkedList contains a Loop ? "+singlyLinkedList.containsLoop(singlyLinkedList.head));
+        System.out.println("Does LinkedList contains a Loop ? " + singlyLinkedList.containsLoop(singlyLinkedList.head));
 //        System.out.println("Is node present in the LinkedList " + singlyLinkedList.searchNode(3));
 //        ListNode<Integer> reverse = singlyLinkedList.reverse(singlyLinkedList.head);
 //        singlyLinkedList.printList(reverse);
