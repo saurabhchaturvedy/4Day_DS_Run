@@ -1,5 +1,7 @@
 package Array;
 
+import java.util.Arrays;
+
 public class Array {
 
     public static int minValue(int[] arr) {
@@ -26,6 +28,8 @@ public class Array {
 
     public static void main(String[] args) {
         int[] arr = {4, 7, 8, 3, 5, 9, 2};
+        //int[] ints = Arrays.copyOf(arr, 2 * arr.length);
+        // System.out.println("size of resized array is "+ints.length);
         System.out.print("Array elements : ");
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
