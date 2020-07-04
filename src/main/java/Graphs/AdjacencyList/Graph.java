@@ -1,8 +1,6 @@
 package Graphs.AdjacencyList;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class Graph {
 
@@ -79,6 +77,13 @@ public class Graph {
 
     public static void main(String[] args) {
         Graph graph = new Graph(5);
+        Map<Integer,String> map = new HashMap<>();
+        map.put(1,"abc");
+        map.put(2,"def");
+        map.put(3,"ghi");
+        map.put(4,"jkl");
+        map.put(5,"mno");
+
         graph.addEdge(0, 1);
         graph.addEdge(1, 2);
         graph.addEdge(2, 3);
